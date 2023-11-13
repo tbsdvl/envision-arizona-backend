@@ -8,8 +8,6 @@ export const validateEmail = async (email) => {
         if (validateEmailResult.status === 200) {
             const response = new EmailValidationResponseModel(validateEmailResult.data);
             return !response.disposable;
-        } else {
-            return false;
         }
     } catch (err) {
         console.error(err);
