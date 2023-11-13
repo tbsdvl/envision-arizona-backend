@@ -1,5 +1,6 @@
 'use strict';
 import fastify from 'fastify';
+import cors from '@fastify/cors';
 import dotenv from 'dotenv';
 import { validateEmail } from './src/services/emailValidation.js';
 import { ContactFormModel } from './src/models/contactForm.js';
@@ -7,6 +8,14 @@ import { sendEmail } from './src/services/email.js';
 dotenv.config();
 
 const server = fastify();
+await fastify.register(cors, {
+    // put your options here
+    origin: [
+        `http://${process.env.HOST}:${process.env.PORT}`,
+        process.env.PROXY
+    ],
+    methods: ['GET', 'POST']
+});
 await server.register(import('@fastify/rate-limit'), {
     max: 100,
     timeWindow: 2000
