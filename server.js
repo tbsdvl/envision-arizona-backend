@@ -8,7 +8,7 @@ import { sendEmail } from './src/services/email.js';
 dotenv.config();
 
 const server = fastify();
-await fastify.register(cors, {
+await server.register(cors, {
     // put your options here
     origin: [
         `http://${process.env.HOST}:${process.env.PORT}`,
