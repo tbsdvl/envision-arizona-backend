@@ -19,8 +19,8 @@ const getRequestedService = (requestedService) => {
     switch (+requestedService) {
         case RequestedServiceTypes.financialManagement:
             return RequestedServiceConstants.financialManagement;
-        case RequestedServiceTypes.gateMaintenance:
-            return RequestedServiceConstants.gateMaintenance;
+        case RequestedServiceTypes.gateServices:
+            return RequestedServiceConstants.gateServices;
         case RequestedServiceTypes.other:
             return RequestedServiceConstants.other;
     }
