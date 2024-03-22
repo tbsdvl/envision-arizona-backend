@@ -1,5 +1,6 @@
 export const RequestedServiceConstants = {
     financialManagement: 'Financial Management',
-    gateServices: 'Gate Services',
+    gateManagement: 'Gate Management',
+    communityManagement: 'Community Management',
     other: 'other'
 }
