@@ -1,5 +1,6 @@
 export const RequestedServiceTypes = {
     financialManagement: 1,
-    gateServices: 2,
-    other: 3
+    gateManagement: 2,
+    communityManagement: 3,
+    other: 4
 }
