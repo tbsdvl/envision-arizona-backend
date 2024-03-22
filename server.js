@@ -21,6 +21,10 @@ await server.register(import('@fastify/rate-limit'), {
     timeWindow: 2000
 });
 
+server.get('/', async (request, reply) => {
+    reply.code(200).send({ message: 'API is online!' });
+});
+
 server.post('/submit', async (request, reply) => {
     // validate the data with joi
 
